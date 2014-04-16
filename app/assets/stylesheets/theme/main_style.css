@@ -1,0 +1,921 @@
+/* Variables
+------------------------------------------------------------------
+{
+  Color: [
+    {
+      value: 'teal',
+      sample: '#477780',
+      NormalColor: '#477780',
+      HoverColor: '#43a2b4',
+	  HeadingColor: '#253e42',
+	  FooterLink: '#6c8185',
+	  FooterHover: '#8fc9d2',
+	  HeaderColor: '#a2b9be',
+	  HeaderLink: '#7cdae0',
+	  NavColor: '#b4d2d8',
+	  SubNavBg: '#152a2f',
+	  SubNavHover: '#1e383e'
+    },
+    {
+      value: 'blue',
+      sample: '#2280ab',
+      NormalColor: '#2280ab',
+      HoverColor: '#6bb7da',
+	  HeadingColor: '#1e3751',
+	  FooterLink: '#6c7e85',
+	  FooterHover: '#8fb7d2',
+	  HeaderColor: '#a8bac5',
+	  HeaderLink: '#80c8dd',
+	  NavColor: '#accedd',
+	  SubNavBg: '#132132',
+	  SubNavHover: '#213447'
+    },
+    {
+      value: 'forest',
+      sample: '#47804a',
+      NormalColor: '#47804a',
+      HoverColor: '#71aa65',
+	  HeadingColor: '#274225',
+	  FooterLink: '#6c856d',
+	  FooterHover: '#abd0ab',
+	  HeaderColor: '#b1c8af',
+	  HeaderLink: '#addea6',
+	  NavColor: '#cbdecb',
+	  SubNavBg: '#1c2c19',
+	  SubNavHover: '#344931'
+    },
+    {
+      value: 'orange',
+      sample: '#af5d03',
+      NormalColor: '#af5d03',
+      HoverColor: '#e39025',
+	  HeadingColor: '#6c3a16',
+	  FooterLink: '#9b7a58',
+	  FooterHover: '#d3b89c',
+	  HeaderColor: '#e4d0b5',
+	  HeaderLink: '#ffcf8f',
+	  NavColor: '#e6dcd0',
+	  SubNavBg: '#733300',
+	  SubNavHover: '#9e4c0b'
+    },
+    {
+      value: 'purple',
+      sample: '#714780',
+      NormalColor: '#714780',
+      HoverColor: '#b781ca',
+	  HeadingColor: '#583b61',
+	  FooterLink: '#7e7186',
+	  FooterHover: '#c5acd5',
+	  HeaderColor: '#beacc1',
+	  HeaderLink: '#c098d1',
+	  NavColor: '#d5c9db',
+	  SubNavBg: '#2c1835',
+	  SubNavHover: '#402949'
+    },
+    {
+      value: 'red',
+      sample: '#5b2520',
+      NormalColor: '#5b2520',
+      HoverColor: '#b65f58',
+	  HeadingColor: '#6c2d27',
+	  FooterLink: '#856d6c',
+	  FooterHover: '#d6b8b7',
+	  HeaderColor: '#cbbfbe',
+	  HeaderLink: '#cb9792',
+	  NavColor: '#ede2e2',
+	  SubNavBg: '#411513',
+	  SubNavHover: '#59241f'
+    }
+  ]
+}
+------------------------------------------------------------------
+*/
+
+/* Resets
+--------------------------------------------------------------------------------*/
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {
+	margin: 0;
+	padding: 0;
+}
+
+a img {
+	border: 0;
+}
+
+a {
+	color: $NormalColor;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $HoverColor;
+}
+
+/* General Styling and Structure
+--------------------------------------------------------------------------------*/
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #4d4e4e;
+	margin: 0;
+	padding: 0;
+	background: url(Footer_Bg.jpg);
+}
+
+#wrapper {
+	background: url(Main_Bg.jpg);
+}
+
+#wrap-in {
+	background: url(Top_Color_Repeat-x-$Color.png) repeat-x;
+}
+
+.header-wrapper {
+	background: url(header-wrapper-gradient-$Color.png) bottom repeat-x;
+}
+.header-outer-wrapper {
+	background: url(header-wrapper-$Color.jpg) center bottom no-repeat;
+	width:100%;
+}
+
+.header-wrapper .container {
+	width: 1006px;
+}
+
+#wrap-inner {
+	background: url(wrapper-$Color.jpg) center top no-repeat;
+}
+
+h2 {
+	font-size: 1.8em;
+	margin: 0;
+	padding: .3em 0;
+	line-height: 1.2;
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+#content h2 {
+	color: $HeadingColor;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0;
+	padding: .5em 0;
+}
+blockquote {
+	font-style:italic;
+	border-left:4px solid #ddd;
+	margin:10px 0 10px 0;
+	padding-left:20px;
+	line-height:1.5;
+	color:#888;
+}
+
+#content p {
+	color: #4d4e4e;
+}
+
+#content abbr {
+	border-bottom: 1px dotted #8f8f8f;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1006px;
+}
+
+#header-in {
+	padding: 0 50px;
+}
+
+/* Header
+--------------------------------------------------------------------------------*/
+
+#header {
+	width: 100%;
+	height: 170px;
+}
+
+#header,
+#header table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#header td {
+	vertical-align: middle;
+	text-align: left;
+}
+
+#logo {
+	padding: 15px 0;
+}
+
+#logo,
+#logo a {
+	font-size: 72px;
+	color: #fff;
+	font-family: "Alex Brush", Arial, Helvetica, sans-serif;
+	line-height: 1.1;
+	-webkit-text-stroke-width: 0.6px;
+}
+
+#logo a:hover {
+	color: #fff;
+}
+
+#header-right {
+	padding: 0 0 0 10px;
+}
+
+#header-right table {
+	width: 1px;
+}
+
+#header-right table,
+#header-right .search,
+#header-right .wsite-search {
+	clear: right;
+	float: right;
+}
+
+#header-right td {
+	padding: 0;
+}
+
+#header-right a {
+	color: $HeaderLink;
+}
+
+#header-right a:hover {
+	color: #fff;
+}
+
+/* TOP RIGHT: Phone Number
+--------------------------------------------------------------------------------*/
+
+#header-right .phone-number .wsite-text {
+	display: block;
+	white-space: nowrap;
+	color: $HeaderColor;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 5px 0 5px 15px;
+}
+
+/* TOP RIGHT: Social Links
+--------------------------------------------------------------------------------*/
+
+.wsite-social {
+	margin: 0 0 0 8px;
+}
+
+
+.wsite-social-item {
+	width: 23px;
+	height: 23px;
+	margin: 0 0 0 3px;
+	background-image:url(social-$color.png);
+}
+
+.wsite-social-facebook {background-position:0 0;}
+	.wsite-social-facebook:hover {background-position:0 -23px;}
+	.wsite-social-facebook:active {background-position:0 -46px;}
+.wsite-social-pinterest {background-position:-23px 0;}
+	.wsite-social-pinterest:hover {background-position:-23px -23px;}
+	.wsite-social-pinterest:active {background-position:-23px -46px;}
+.wsite-social-twitter {background-position:-46px 0;}
+	.wsite-social-twitter:hover {background-position:-46px -23px;}
+	.wsite-social-twitter:active {background-position:-46px -46px;}
+.wsite-social-linkedin {background-position:-69px 0;}
+	.wsite-social-linkedin:hover {background-position:-69px -23px;}
+	.wsite-social-linkedin:active {background-position:-69px -46px;}
+.wsite-social-mail {background-position:-92px 0;}
+	.wsite-social-mail:hover {background-position:-92px -23px;}
+	.wsite-social-mail:active {background-position:-92px -46px;}
+.wsite-social-rss {background-position:-115px 0;}
+	.wsite-social-rss:hover {background-position:-115px -23px;}
+	.wsite-social-rss:active {background-position:-115px -46px;}
+.wsite-social-flickr {background-position:-138px 0;}
+	.wsite-social-flickr:hover {background-position:-138px -23px;}
+	.wsite-social-flickr:active {background-position:-138px -46px;}
+.wsite-social-plus {background-position:-161px 0;}
+	.wsite-social-plus:hover {background-position:-161px -23px;}
+	.wsite-social-plus:active {background-position:-161px -46px;}
+.wsite-social-vimeo {background-position:-184px 0;}
+	.wsite-social-vimeo:hover {background-position:-184px -23px;}
+	.wsite-social-vimeo:active {background-position:-184px -46px;}
+.wsite-social-yahoo {background-position:-207px 0;}
+	.wsite-social-yahoo:hover {background-position:-207px -23px;}
+	.wsite-social-yahoo:active {background-position:-207px -46px;}
+.wsite-social-youtube {background-position:-230px 0;}
+	.wsite-social-youtube:hover {background-position:-230px -23px;}
+	.wsite-social-youtube:active {background-position:-230px -46px;}
+
+
+/* TOP RIGHT: Search Box
+--------------------------------------------------------------------------------*/
+
+#header-right .search {
+}
+
+.wsite-search {
+	margin: 5px 0 5px 15px;
+}
+
+#header-right .wsite-search-input {
+	width: 168px;
+	height: 14px;
+	border: none;
+	padding: 9px 10px 9px !important;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #434343;
+	font-size: 12px;
+	background: url(input-bg-$Color.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#header-right .wsite-search-button {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	color: #010101;
+	font-size: 12px;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background: url(submit-bg-$Color.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Navigation
+--------------------------------------------------------------------------------*/
+
+#topnav {
+	clear: both;
+	margin: 0 0 0 45px;
+}
+
+#topnav ul {
+	list-style: none;
+	float: left;
+}
+
+#topnav ul li {
+	list-style: none;
+	float: left;
+	background: url(nav-sep-$Color.png) right center no-repeat;
+	padding: 0 2px 0 0;
+}
+
+#topnav a {
+	float: left;
+	display: block;
+	color: $NavColor;
+	font-size: 15px;
+	text-decoration: none;
+	font-family: "PT Sans Narrow", Arial, Helvetica, sans-serif;
+	padding: 15px;
+	border: 0;
+	outline: 0;
+	line-height: 1;
+	list-style-type: none;
+	text-transform: uppercase;
+}
+
+#topnav li#active a,
+#topnav a:hover {
+	background: url(nav-active-$Color.jpg) repeat-x bottom;
+	border: 0;
+}
+
+/****************************** flyout menus ******************************/
+
+#wsite-menus .wsite-menu li a {
+	font-family: Tahoma, Geneva, sans-serif;
+	padding: 10px;
+	color: #fff;
+	background: $SubNavBg;
+	border: 0;
+}
+
+#wsite-menus .wsite-menu li a:hover {
+	color: #fff;
+	background: $SubNavHover;
+}
+
+/* main  */
+
+#main {
+	background: url(main-bg.png) 1px top;
+	overflow: hidden;
+	position: relative;
+	top: 1px;
+}
+
+#main-inner {
+	padding: 0 32px;
+}
+
+#content {
+	min-height: 550px;
+	padding: 18px 45px 50px;
+}
+
+#banner {
+	position: relative;
+	background: url(banner-bg.png) no-repeat;
+	padding: 29px 43px 45px 44px;
+	overflow: hidden;
+}
+
+.banner-overlay-t,
+.banner-overlay-r,
+.banner-overlay-b,
+.banner-overlay-l {
+	position: absolute;
+	z-index: 9;
+}
+
+/* PAGE TYPE: banner-tall
+--------------------------------------------------------------------------------*/
+
+.tall-header-page .wsite-header {
+	width: 855px;
+	height: 277px;
+	background: url(banner-tall.jpg) no-repeat;
+}
+
+.tall-header-page .banner-overlay-t {
+	width: 850px;
+	height: 5px;
+	background: #fff;
+	top: 29px;
+	left: 47px;
+}
+
+.tall-header-page .banner-overlay-r {
+	width: 10px;
+	height: 277px;
+	background: url(banner-overlay.png) -10px top no-repeat;
+	top: 29px;
+	right: 42px;
+}
+
+.tall-header-page .banner-overlay-b {
+	width: 845px;
+	height: 5px;
+	background: #fff;
+	bottom: 45px;
+	left: 48px;
+}
+
+.tall-header-page .banner-overlay-l {
+	width: 10px;
+	height: 277px;
+	background: url(banner-overlay.png) top left no-repeat;
+	top: 29px;
+	left: 42px;
+}
+
+/* PAGE TYPE: banner-short
+--------------------------------------------------------------------------------*/
+
+.short-header-page .wsite-header {
+	width: 856px;
+	height: 177px;
+	background: url(banner-short.jpg) no-repeat;
+}
+
+.short-header-page #banner {
+	background: url(banner-short-bg.png) no-repeat;
+}
+
+.short-header-page .banner-overlay-t {
+	width: 850px;
+	height: 5px;
+	background: #fff;
+	top: 29px;
+	left: 47px;
+}
+
+.short-header-page .banner-overlay-r {
+	width: 10px;
+	height: 178px;
+	background: url(banner-overlay.png) -50px top no-repeat;
+	top: 29px;
+	right: 42px;
+}
+
+.short-header-page .banner-overlay-b {
+	width: 845px;
+	height: 5px;
+	background: #fff;
+	bottom: 45px;
+	left: 48px;
+}
+
+.short-header-page .banner-overlay-l {
+	width: 10px;
+	height: 177px;
+	background: url(banner-overlay.png) -40px top no-repeat;
+	top: 29px;
+	left: 42px;
+}
+
+/* PAGE TYPE: no-header
+--------------------------------------------------------------------------------*/
+
+.no-header-page #banner {
+	display: none;
+}
+
+.no-header-page #main-inner {
+	background: url(main-short-header.png) no-repeat;
+}
+
+/* PAGE TYPE: banner-landing
+--------------------------------------------------------------------------------*/
+
+.landing-page #banner {
+	background: url(landing-banner-bg.png) no-repeat;
+}
+
+.landing-page #content {
+	padding-top: 18px;
+}
+
+.landing-page .banner-overlay-t {
+	width: 496px;
+	height: 5px;
+	background: #fff;
+	top: 0;
+	left: 0;
+}
+
+.landing-page .banner-overlay-r {
+	width: 10px;
+	height: 347px;
+	background: url(banner-overlay.png) -30px top no-repeat;
+	top: 0;
+	right: 0;
+}
+
+.landing-page .banner-overlay-b {
+	width: 480px;
+	height: 5px;
+	background: #fff;
+	bottom: 0;
+	left: 7px;
+}
+
+.landing-page .banner-overlay-l {
+	width: 10px;
+	height: 347px;
+	background: url(banner-overlay.png) -20px top no-repeat;
+	top: 0;
+	left: 0;
+}
+
+#bannerleft {
+	float: right;
+	padding: 0;
+	position: relative;
+}
+
+.landing-page .wsite-header {
+	width: 496px;
+	height: 347px;
+	background: url(banner-landing.jpg) no-repeat;
+}
+
+.landing-banner-outer {
+	display: table;
+	#position: relative;
+	overflow: hidden;
+}
+
+.landing-banner-mid {
+	#position: absolute;
+	#top: 50%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.landing-banner-inner {
+	#position: relative;
+	#top: -50%;
+}
+
+#bannerright {
+	float: left;
+	width: 308px;
+	height: 347px;
+	padding: 0 50px 0 0;
+}
+
+#bannerright h2 {
+	color: $HeadingColor;
+	font-size: 30px;
+	border: none;
+	margin: 0;
+	padding: 0px;
+	line-height: 28px;
+}
+
+#bannerright p {
+	color: #4d4e4e;
+	font-size: 14px;
+	margin: 0;
+	padding: 20px 0px;
+	line-height: 140%;
+}
+
+#bannerright .wsite-button {
+	margin: 0;
+}
+
+/* PAGE TYPE: splash
+--------------------------------------------------------------------------------*/
+
+.splash-page #header {
+	width: 532px;
+}
+
+.splash-page #banner {
+	width: 527px;
+	height: 161px;
+	padding: 6px 4px 4px 6px;
+	background: url(banner-splash-bg.png) no-repeat;
+}
+
+.splash-page .wsite-header {
+	width: 515px;
+	height: 149px;
+	background: url(banner-splash.jpg) no-repeat;
+}
+
+.splash-page #content-container {
+	width: 528px;
+}
+
+.splash-page #content {
+	width: 528px;
+}
+
+.splash-page #footer {
+	width: 524px;
+}
+
+/* Footer
+--------------------------------------------------------------------------------*/
+
+#footer-wrap {
+	background: url(footer-bg.jpg) repeat-x;
+}
+
+#footer {
+	background: url(footer-top.png) 32px top no-repeat;
+	padding: 92px 48px 50px;
+	font-size: 12px;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: right;
+	position: relative;
+	top: -35px;
+}
+
+#footer p {
+	color: #fff;
+}
+
+#footer a {
+	color: $FooterLink;
+}
+
+#footer a:hover {
+	color: $FooterHover;
+}
+
+#footer h2 {
+	font-size: 16px;
+	margin: 0 0 2px;
+	padding: .3em 0 .5em 0;
+	line-height: 1;
+	font-family: "PT Sans", "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #fff;
+	border-bottom:1px dashed #ccc;
+}
+
+#footer span {
+	vertical-align: middle;
+}
+
+#footer blockquote {
+	border-left:4px solid #555;
+	color:#888;
+}
+
+.wsite-footer {  /* make sure enough space between element footer and attribution */
+	margin-bottom: 15px;
+}
+
+/* Form Customization
+--------------------------------------------------------------------------------*/
+
+.wsite-form-label {
+	display: inline-block;
+	color: #4d4e4e;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	padding: 12px 0 5px 0;
+}
+
+.form-radio-container {
+	color: #4d4e4e;
+	font-size: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.wsite-form-input, .wsite-search-element-input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #4d4e4e;
+	background: #fff;
+	border: 1px solid #dcdcdc;
+	padding: 6px 4px 6px !important;
+	line-height: 1;
+}
+
+.form-select {
+	color: #4d4e4e;
+	background: #fff;
+	border: 1px solid #dcdcdc;
+	font-size: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 3px 4px;
+	width: 320px;
+	height: 27px;
+	line-height: 27px;
+}
+
+/* Footer Form Customization
+--------------------------------------------------------------------------------*/
+
+.wsite-form-container {
+	margin-top:0px !important;
+	text-align:left;
+	color:#888;
+}
+
+.wsite-footer .wsite-form-label {
+	font-size: 1em;
+	padding: 5px 0 2px 0;
+	color:#eee;
+}
+
+.wsite-footer .wsite-form-field {
+	width:300px !important;
+}
+
+.wsite-footer .form-radio-container {
+	font-size:1em;
+	color:#aaa;
+}
+
+.wsite-footer .wsite-form-input {
+	font-size: 1em;
+	width: 100% !important;
+}
+
+.wsite-footer .form-select {
+	width: 100%;
+}
+
+/* Buttons
+--------------------------------------------------------------------------------*/
+
+/*
+  Buttons are styled with background image sprites. There are 4 unique image files:
+   - small & normal-colored  (button_small_grey.png)
+   - large & normal-colored  (button_large_grey.png)
+   - small & highlight-colored  (button_small_orange.png)
+   - large & highlight-colored  (button_large_orange.png)
+
+  Each of these 4 types of buttons must define a :hover state (when user's mouse is over)
+  as well as an :active state (when the user presses down).
+
+  Look at the CSS (especially the inner .wsite-button-inner wrapper), as well as the
+  image files to understand how the liquid-width nature of these buttons work.
+ */
+
+/* small */
+
+.wsite-button {
+	color: #1e1e1e !important;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 34px;
+	display: inline-block;
+	font-size: 12px;
+	border: none;
+	font-weight: normal;
+	font-size: 13px;
+	text-decoration: none;
+	padding: 0 15px 0 0;
+	background: url(button.png) no-repeat 100% -105px;
+	text-shadow:0 1px 0 rgba(255,255,255,0.8);
+}
+
+.wsite-button:hover {
+	background-position: 100% -140px;
+}
+
+.wsite-button:active {
+	background-position: 100% -175px;
+}
+
+.wsite-button-inner {
+	height: 34px;
+	line-height: 34px;
+	display: block;
+	font-size: 14px;
+	font-weight: normal;
+	border: none;
+	text-decoration: none;
+	padding: 0 10px 0 25px;
+	background: url(button.png) no-repeat 0 0;
+}
+
+.wsite-button:hover .wsite-button-inner {
+	background-position: 0 -35px;
+}
+
+.wsite-button:active .wsite-button-inner {
+	background-position: 0 -70px;
+}
+
+/* large */
+
+.wsite-button-large {
+	height: 41px;
+	background: url(button_large.png) no-repeat 100% -126px;
+	padding: 0 15px 0 0;
+}
+
+.wsite-button-large:hover {
+	background-position: 100% -168px;
+}
+
+.wsite-button-large:active {
+	background-position: 100% -210px;
+}
+
+.wsite-button-large .wsite-button-inner {
+	height: 41px;
+	line-height: 41px;
+	padding: 0 10px 0 25px;
+	background: url(button_large.png) no-repeat 0 0;
+}
+
+.wsite-button-large:hover .wsite-button-inner {
+	background-position: 0 -42px;
+}
+
+.wsite-button-large:active .wsite-button-inner {
+	background-position: 0 -84px;
+}
+
+/* highlight */
+
+/*
+Making the highlighted versions of the buttons is easy because we just need
+to switch out the background images. This works because the different button
+states (normal, :hover, :active) have their sprite coordinates in the same places.
+*/
+
+.wsite-button-large.wsite-button-highlight {
+	background-image: url(button_large_highlight_$Color.png);
+}
+
+.wsite-button-large.wsite-button-highlight .wsite-button-inner {
+	background-image: url(button_large_highlight_$Color.png);
+}
+
+.wsite-button-highlight {
+	color: #fff !important;
+	background-image: url(button_highlight_$Color.png);
+	text-shadow:0 -1px 0 rgba(0,0,0,0.9); 
+}
+
+.wsite-button-highlight .wsite-button-inner {
+	background-image: url(button_highlight_$Color.png);
+}

@@ -1,0 +1,103 @@
+<%= content_for :navbar do %>
+    <ul class='wsite-menu-default'>
+      <li id='pg102028352772474583'><a href='/'>Home</a></li>
+      <li id='pg781891109137199263'><a href='/about'>About</a></li>
+      <li id='active'><a href='/awards'>Awards</a></li>
+      <li id='pg744403079724393911'><a href='/nomination_procedure'>Nomination Procedure</a></li>
+      <li id='pg783104721222161831'><a href='/contact'>Contact</a></li>
+    </ul>
+<% end %>
+<div id="main">
+          <div id="main-inner">
+            <div id="banner">
+              <div id="banner-right">
+                <div class="wsite-header"></div>
+              </div>
+            </div>
+            <div id="content">
+              <div id='wsite-content' class='wsite-elements wsite-not-footer'>
+                <h2 class="wsite-content-title" style="text-align:left;"><strong><%= AwardData.where(:key=>"AwardHeader").first.data %></strong></h2>
+
+                <span class='imgPusher' style='float:left;height:0px'></span><span
+              style='z-index:10;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a><img
+              src="<%= AwardData.where(:key=>"AwardImage").first.avatar.url %>" width="256px" height="170px"
+              style="margin-top: 14px; margin-bottom: 0px; margin-left: 0px; margin-right: 12px; border-width:1px;padding:3px;"
+              alt="Picture" class="wsite-image"/></a><span
+              style="display: block; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;"
+              class="wsite-caption"></span></span>
+
+                <div class="paragraph" style="text-align:left;display:block;">
+                  <strong style=""><%= AwardData.where(:key => "AwardParaTitle1").first.data %></strong><br/>
+                  <%= AwardData.where(:key => "AwardPara1").first.data %><br/><br/>
+                  <strong
+                style=""><%= AwardData.where(:key => "AwardParaTitle2").first.data %></strong><br/>
+                  <%= AwardData.where(:key => "AwardPara2").first.data %>
+                </div>
+                <hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+                <div style="text-align:left;">
+                  <div style="height: 10px; overflow: hidden;"></div>
+                  <a class="wsite-button wsite-button-large wsite-button-highlight"
+                     href="nomination-procedure.html">
+                    <span class="wsite-button-inner">Nomination Forms and Procedure</span>
+                  </a>
+
+                  <div style="height: 10px; overflow: hidden;"></div>
+                </div>
+
+                <div>
+                  <div style="height: 20px; overflow: hidden; width: 100%;"></div>
+                  <hr class="styled-hr" style="width:100%;"></hr>
+                  <div style="height: 20px; overflow: hidden; width: 100%;"></div>
+                </div>
+
+                <div>
+                  <div class="wsite-multicol">
+                    <div class='wsite-multicol-table-wrap' style='margin:0 -15px'>
+                      <table class='wsite-multicol-table'>
+                        <tbody class='wsite-multicol-tbody'>
+                        <tr class='wsite-multicol-tr'>
+                          <td class='wsite-multicol-col' style='width:50%;padding:0 15px'>
+
+                            <h2 class="wsite-content-title" style="text-align:left;">
+                              <strong><%= AwardData.where(:key => "EligibilityHeader").first.data %></strong></h2>
+
+                            <div class="paragraph" style="text-align:left;"><span
+                            style="font-size: 1em; line-height: 1.5;"><%= AwardData.where(:key => "EligibilityPara1").first.data %></span>
+                              <br/><br/><%= AwardData.where(:key => "EligibilityPara2").first.data %>
+                              <ol style="">
+                                <% AwardData.where(:key => "EligibilityList").each do |m| %>
+                                    <li style=""><%= m.data %></li>
+                                <% end %>
+                                <!--<li style="">Kaziranga National Park</li>-->
+                                <!--<li style="">Manas National Park</li>-->
+                                <!--<li style="">Pobitara Wildlife Sanctuary</li>-->
+                                <!--<li style="">Orang National Park</li>-->
+                              </ol>
+                            </div>
+
+                          </td>
+                          <td class='wsite-multicol-col' style='width:50%;padding:0 15px'>
+
+                            <h2 class="wsite-content-title" style="text-align:left;">
+                              <strong><%= AwardData.where(:key => "ExampleHeader").first.data %></strong></h2>
+
+                            <div class="paragraph" style="text-align:left;">
+                              <ol style="">
+                                <% AwardData.where(:key => "ExampleList").each do |m| %>
+                                    <li style=""><%= m.data %></li>
+                                <% end %>
+                              </ol>
+                            </div>
+
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

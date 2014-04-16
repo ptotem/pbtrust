@@ -1,0 +1,136 @@
+<%= content_for :navbar do %>
+    <ul class='wsite-menu-default'>
+      <li id='pg102028352772474583'><a href='/'>Home</a></li>
+      <li id='active'><a href='/about'>About</a></li>
+      <li id='pg781891109137199263'><a href='/awards'>Awards</a></li>
+      <li id='pg744403079724393911'><a href='/nomination_procedure'>Nomination Procedure</a></li>
+      <li id='pg783104721222161831'><a href='/contact'>Contact</a></li>
+    </ul>
+<% end %>
+<div id="main">
+  <div id="main-inner">
+    <div id="banner">
+      <div id="banner-right">
+        <div class="wsite-header"></div>
+      </div>
+    </div>
+    <div id="content">
+      <div id='wsite-content' class='wsite-elements wsite-not-footer'>
+        <div>
+          <div class="wsite-multicol">
+            <div class='wsite-multicol-table-wrap' style='margin:0 -15px'>
+              <table class='wsite-multicol-table'>
+                <tbody class='wsite-multicol-tbody'>
+                <tr class='wsite-multicol-tr'>
+                  <td class='wsite-multicol-col' style='width:35%;padding:0 15px'>
+                    <span class='imgPusher' style='float:left;height:0px;margin-top:19%;'></span>
+                    <span style='z-index:10;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'>
+                     <a>
+                       <img src="<%= AboutData.where(:key => "Image1").first.avatar.url %>" style="margin-top: 5px; margin-bottom: 10px;margin-left: 25px; margin-right: 10px; border-width:5px;padding:3px;" alt="Picture"  class="wsite-image"/>
+                     </a>
+                    <span
+                  style="display: block; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;"
+                  class="wsite-caption"></span></span>
+                    <!-- <div class="paragraph" style="text-align:left;display:block;">The Prabhakar Barua Rhino Conservation Trust is set up by the children of Late Prabhakar Barua in memory of their father who was the&nbsp; first Assamese Chief Conservator of Forests of undivided Assam, a position which he held for thirteen long years from 1963 to 1976. A far sighted nature conservationist, he succeeded in creating an exceptional model in conservation, both in terms of forest areas protection and protection of the numerous threatened species of animals, culminating in the formation of the Assam Valley Wild-life Society of which he was the founder Vice- President. It was also during his tenure of office that Kaziranga was declared a National Park in 1974.</div -->
+                    <!--<hr style="width:100%;clear:both;visibility:hidden;"></hr>-->
+
+                    <div>
+                      <div class="wsite-image wsite-image-border-thin "
+                           style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+                        <!-- <a>
+                        <img src="images/6634266.jpg?403" alt="Picture" style="width:auto;max-width:100%" />
+                        </a> -->
+                        <div style="display:block;font-size:90%"></div>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td class='wsite-multicol-col' style='width:50%;padding:0 15px'>
+
+                    <div>
+                      <div class="wsite-image wsite-image-border-thin "
+                           style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+                        <!-- <a>
+                        <img src="images/7944979_orig.jpg" alt="Picture" style="width:100%;max-width:514px" />
+                        </a> -->
+                        <div style="display:block;font-size:90%">
+
+                          <h2 class="wsite-content-title"
+                              style="text-align:left;">
+                            <strong><%= AboutData.where(:key => "AboutHeader").first.data %></strong></h2>
+
+                          <div class="paragraph"
+                               style="text-align:left;display:block;"><%= AboutData.where(:key => "AboutHeaderPara").first.data %>
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <h2 class="wsite-content-title" style="text-align:left;">
+                      <strong><%= AboutData.where(:key => "MemberHeader").first.data %></strong></h2>
+
+                    <div class="paragraph" style="text-align:left;"><span
+                    style="font-size: 1em; line-height: 1.5;"><%= AboutData.where(:key => "MemberPara1").first.data %></span><br/><br/><span
+                    style="font-size: 1em; line-height: 1.5;"></span>
+                      <ol style="font-size: 1em; line-height: 1.5;">
+                        <% AboutData.where(:key => "MemberList").each do |m| %>
+                            <li><%= m.data %></li>
+                        <% end %>
+                        <!--<li>Mrs. Shiela Bora (daughter)</li>-->
+                        <!--<li>Mr. Pranab Barua (son)</li>-->
+                        <!--<li> Mrs. Nila Mehta (daughter)</li>-->
+                        <!--<li>Mr. Pralab Barua (son)</li>-->
+                        <!--<li> Ms. Mala Barua (daughter)</li>-->
+                      </ol>
+                      <span style="font-size: 1em; line-height: 1.5;"><br/><%= AboutData.where(:key => "MemberPara2").first.data %></span><br/><br/><span
+                    style="font-size: 1em; line-height: 1.5;"></span><span
+                    style="font-size: 1em; line-height: 1.5;">  				</span>
+                      <ol style="font-size: 1em; line-height: 1.5;">
+                        <% AboutData.where(:key => "MemberList1").each do |m| %>
+                            <li><%= m.data %></li>
+                        <% end %>
+                        <!--<li>Ms. Nisha Bora (granddaughter)</li>-->
+                        <!--<li>Mr. Varun Mehta (grandson)</li>-->
+                      </ol>
+                    </div>
+
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <h2 class="wsite-content-title" style="text-align:left;"><strong><%= AboutData.where(:key => "AimHeader").first.data %></strong></h2>
+
+        <div class="paragraph" style="text-align:left;">
+          <div style="float: left;width:50%;"><%= AboutData.where(:key => "AimHeaderPara1").first.data %><br/><span
+          style=""></span><br/><span style=""></span> <%= AboutData.where(:key => "AimHeaderPara2").first.data %>
+          </div>
+
+          <div style="float: right;height:320px;width:400px;">
+            <img src="<%= AboutData.where(:key => "Image2").first.avatar.url %>" height="320px"
+                 width="400px">
+          </div>
+
+          <br/><span style=""></span><br/><span style=""></span></div>
+
+        <div style="text-align:left;margin-top: 40%">
+          <div style="height: 10px; overflow: hidden;"></div>
+
+
+          <a class="wsite-button wsite-button-large wsite-button-highlight"
+             href="awards.html">
+            <span class="wsite-button-inner">Know More about the Awards</span>
+          </a>
+
+          <div style="height: 10px; overflow: hidden;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
